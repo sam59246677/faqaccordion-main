@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 300px; /* اندازه طبق طرح */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq {
+  border-bottom: 1px solid hsl(275, 100%, 90%);
+  padding: 1rem 0;
+}
+
+.question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.question:hover {
+  color: hsl(292, 80%, 45%);
+}
+
+.answer {
+  margin-top: 0.8rem;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.5;
+  display: none;
+}
+
+.faq.open .answer {
+  display: block;
+}
+
+.faq.open .icon {
+  content: url("./assets/images/icon-minus.svg");
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: 100% 350px;
+  }
+}
